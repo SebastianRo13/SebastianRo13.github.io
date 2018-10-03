@@ -15,23 +15,23 @@ p {
 color :#D7471;
 }
 </style>
-
-<button id="launchGallery" type="button">Launch Gallery</button>
-<ul id="lightGallery">
-    <li data-src="http://sachinchoolur.github.io/lightGallery/img/https://image.shutterstock.com/image-illustration/3d-illustration-internet-meme-why-450w-433966000.jpg">
-        <a href="https://image.shutterstock.com/image-illustration/3d-illustration-internet-meme-why-450w-433966000.jpg"><img src="http://sachinchoolur.github.io/lightGallery/img/thumb2.jpg" /></a>
-    </li>
-</ul>
-
-
-<button id="launchGallery" type="button">Launch Gallery 2</button>
-<ul>
-    <li>
-        <img src="http://sachinchoolur.github.io/img/download.jpg" />
-    </li>
-</ul>
-
-
-<button onclick="display_image'download.jpg, 500,500, 'Personal Photo');">Display bla bla</button>
-</body>
-</html>       
+module.exports = {
+  presets: [
+    [
+      '@babel/env',
+      {
+        loose: true,
+        modules: false,
+        exclude: ['transform-typeof-symbol']
+      }
+    ]
+  ],
+  plugins: [
+    '@babel/plugin-proposal-object-rest-spread'
+  ],
+  env: {
+    test: {
+      plugins: [ 'istanbul' ]
+    }
+  }
+};     
